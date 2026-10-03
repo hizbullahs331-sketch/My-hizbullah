@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hizbullah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f8fc;
+      --card: #ffffff;
+      --text: #1f2333;
+      --muted: #5c6378;
+      --accent: #2f6fed;
+      --accent-soft: #e6eefe;
+      --border: #e3e6ef;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #12141c;
+        --card: #1b1e29;
+        --text: #eceef5;
+        --muted: #a2a8bb;
+        --accent: #6d9bff;
+        --accent-soft: #232c45;
+        --border: #2a2e3d;
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #12141c;
+      --card: #1b1e29;
+      --text: #eceef5;
+      --muted: #a2a8bb;
+      --accent: #6d9bff;
+      --accent-soft: #232c45;
+      --border: #2a2e3d;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Poppins", "Noto Sans Devanagari", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+
+    /* नेविगेशन */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+    nav .wrap {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px; gap: 12px;
+    }
+    .logo { font-weight: 700; font-size: 1.2rem; color: var(--text); }
+    .links { display: flex; gap: 18px; flex-wrap: wrap; }
+    .links a { color: var(--muted); font-size: .95rem; }
+    .links a:hover { color: var(--accent); }
+
+    /* मुख्य भाग */
+    header { padding: 72px 0 56px; text-align: center; }
+    .avatar {
+      width: 110px; height: 110px; border-radius: 50%;
+      margin: 0 auto 20px;
+      display: grid; place-items: center;
+      background: var(--accent-soft); color: var(--accent);
+      font-size: 2.6rem; font-weight: 700;
+    }
+    h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); line-height: 1.2; }
+    .tagline { color: var(--muted); margin-top: 10px; font-size: 1.05rem; }
+    .btn {
+      display: inline-block; margin-top: 26px;
+      padding: 10px 26px; border-radius: 999px;
+      background: var(--accent); color: #fff; font-weight: 600;
+    }
+    .btn:hover { opacity: .9; }
+
+    section { padding: 40px 0; }
+    h2 { font-size: 1.5rem; margin-bottom: 18px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+    }
+    .grid {
+      display: grid; gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .card h3 { font-size: 1.1rem; margin-bottom: 6px; }
+    .card p { color: var(--muted); }
+
+    .contact-list { list-style: none; display: grid; gap: 10px; }
+    .contact-list li { color: var(--muted); }
+    .contact-list strong { color: var(--text); }
+
+    footer {
+      text-align: center; padding: 30px 0 40px;
+      color: var(--muted); font-size: .9rem;
+      border-top: 1px solid var(--border); margin-top: 30px;
+    }
+
+    @media (max-width: 520px) {
+      nav .wrap { height: auto; padding-top: 10px; padding-bottom: 10px; flex-direction: column; }
+      .links { gap: 14px; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="wrap">
+      <a href="#" class="logo">Hizbullah</a>
+      <div class="links">
+        <a href="#about">मेरे बारे में</a>
+        <a href="#services">काम</a>
+        <a href="#contact">संपर्क</a>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="wrap">
+      <div class="avatar">H</div>
+      <h1>नमस्ते, मैं Hizbullah हूँ 👋</h1>
+      <p class="tagline">मेरी वेबसाइट पर आपका स्वागत है</p>
+      <a href="#contact" class="btn">मुझसे संपर्क करें</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="about">
+      <h2>मेरे बारे में</h2>
+      <div class="card">
+        <p>
+          यहाँ अपने बारे में कुछ लिखें — आप कौन हैं, कहाँ से हैं, क्या करते हैं
+          और आपको क्या पसंद है। यह टेक्स्ट <code>index.html</code> फ़ाइल में
+          आसानी से बदला जा सकता है।
+        </p>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>मैं क्या करता हूँ</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>काम 1</h3>
+          <p>अपने पहले काम या हुनर के बारे में छोटा सा विवरण।</p>
+        </div>
+        <div class="card">
+          <h3>काम 2</h3>
+          <p>अपने दूसरे काम या हुनर के बारे में छोटा सा विवरण।</p>
+        </div>
+        <div class="card">
+          <h3>काम 3</h3>
+          <p>अपने तीसरे काम या हुनर के बारे में छोटा सा विवरण।</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>संपर्क करें</h2>
+      <div class="card">
+        <ul class="contact-list">
+          <li><strong>ईमेल:</strong> <a href="mailto:your-email@example.com">your-email@example.com</a></li>
+          <li><strong>फ़ोन:</strong> +91 00000 00000</li>
+          <li><strong>शहर:</strong> आपका शहर, भारत</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Hizbullah — सर्वाधिकार सुरक्षित
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
